@@ -92,3 +92,7 @@ exports.data = function(cb) {
 exports.manage_post = function(post, cb) {
 	cb(0, null);
 };
+
+exports.columns = 6;
+exports.title = "Network Info";
+exports.updatetime = 1000;
