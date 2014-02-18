@@ -14,7 +14,7 @@ function get_nic_details(nicname, cb) {
 	var util = require('util');
 	var exec = require('child_process').exec;
 
-	exec("/sbin/ifconfig " + nicname, function(err, stdout, stderr) {
+	exec("/sbin/ifconfig " + nicname, function(err, stdout) {
 		var nicrecord = {
 			name: nicname
 		};
@@ -63,7 +63,7 @@ exports.data = function(cb) {
 		nics : []
 	};
 
-	exec("/sbin/ifconfig -s -a", function(err, stdout, stderr) {
+	exec("/sbin/ifconfig -s -a", function(err, stdout) {
 		if (!err) {
 			var nics = stdout.split(/[\r\n]{1,2}/);
 
