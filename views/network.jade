@@ -44,5 +44,5 @@ script(type="text/javascript").
 	}
 
 	function updateNetworkGrid() {
-		$.startUpdatingWidgetJson(socket, #{user_widget.id}, '#{sid}', callbackUpdateNetworkGrid, null);
+		$.startUpdatingWidgetJson(socket, #{user_widget.id}, '#{username}', callbackUpdateNetworkGrid, null);
 	}
